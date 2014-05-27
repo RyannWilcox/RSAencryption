@@ -16,10 +16,10 @@ public class RSATest {
 
 		BigInteger plaintext = new BigInteger(text.getBytes());
 		BigInteger ciphertext = rsa.encrypt(plaintext);
-		System.out.println("Before Encryption: "+ text);
-		System.out.println();
-		System.out.println("ciphertext: "+ new String(ciphertext.toByteArray()));
-		System.out.println();
+		
+		System.out.println("Before Encryption: "+ text + "\n");
+		System.out.println("ciphertext: "+ new String(ciphertext.toByteArray()) + "\n");
+		
 		BigInteger decryptedText = rsa.decrypt(ciphertext);
 		System.out.println("plaintext: " + new String(decryptedText.toByteArray()));
 		
