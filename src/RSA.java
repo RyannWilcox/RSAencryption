@@ -99,9 +99,10 @@ public class RSA {
 	 */
 	private BigInteger calcE(BigInteger p,BigInteger eTemp){
 		do{
-			eTemp = new BigInteger(2 * PRIME_SIZE,new Random());
-			BigInteger sa = eTemp.gcd(p);
-			}while(eTemp.gcd(p).intValue() != 1); //loop until gcd() = 1 
+		     eTemp = new BigInteger(2 * PRIME_SIZE,new Random());
+		     BigInteger sa = eTemp.gcd(p);
+		}while(eTemp.gcd(p).intValue() != 1); //loop until gcd() = 1 
+		
 		return eTemp;
 	}
 	
